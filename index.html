@@ -1,1 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio — Fotografía</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@200;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
 
+  <!-- ───── HEADER ───── -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-name">A. Reyes</span>
+        <span class="logo-subtitle">Fotografía</span>
+      </div>
+      <nav class="site-nav">
+        <a href="#galeria">Galería</a>
+        <a href="#sobre">Sobre mí</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menú">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- ───── HERO ───── -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Colección 2025</p>
+      <h1 class="hero-title">Luz<br /><em>& Silencio</em></h1>
+      <p class="hero-desc">
+        Una mirada íntima sobre los espacios que habitamos<br />y los instantes que olvidamos fotografiar.
+      </p>
+      <a href="#galeria" class="btn-scroll">
+        <span>Ver galería</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M8 3v10M3 9l5 5 5-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+    <div class="hero-grain"></div>
+  </section>
+
+  <!-- ───── GALERÍA ───── -->
+  <!--
+    INSTRUCCIONES PARA AÑADIR FOTOS:
+    1. Copia cualquier bloque <article class="photo-item"> y pégalo al final
+       de la lista, antes del cierre </div> del .gallery-grid.
+    2. Cambia el src de <img> por la ruta a tu foto.
+    3. Actualiza data-category (landscape / portrait / urban / abstract).
+    4. Edita el <h3> y <p> con el título y descripción que quieras.
+    ¡Eso es todo! El grid se ajusta solo.
+  -->
+  <section class="gallery-section" id="galeria">
+    <div class="section-header">
+      <h2 class="section-title">Galería</h2>
+      <!-- Filtros — agrega nuevos data-filter si creas categorías nuevas -->
+      <div class="filter-bar" role="tablist">
+        <button class="filter-btn active" data-filter="all" role="tab">Todo</button>
+        <button class="filter-btn" data-filter="landscape" role="tab">Paisaje</button>
+        <button class="filter-btn" data-filter="portrait" role="tab">Retrato</button>
+        <button class="filter-btn" data-filter="urban" role="tab">Urbano</button>
+        <button class="filter-btn" data-filter="abstract" role="tab">Abstracto</button>
+      </div>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+
+      <!-- FOTO 1 -->
+      <article class="photo-item" data-category="landscape">
+        <div class="photo-wrap">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
+               alt="Montañas al amanecer" loading="lazy" />
+          <div class="photo-overlay">
+            <div class="photo-meta">
+              <h3>Amanecer en los Andes</h3>
+              <p>Boyacá, Colombia · 2025</p>
+            </div>
+            <button class="photo-expand" aria-label="Ver imagen completa" data-index="0">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M7 3H3v4M17 3h-4M3 13v4h4M13 17h4v-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- FOTO 2 -->
+      <article class="photo-item photo-tall" data-category="portrait">
+        <div class="photo-wrap">
+          <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80"
+               alt="Retrato femenino" loading="lazy" />
+          <div class="photo-overlay">
+            <div class="photo-meta">
+              <h3>Penumbra</h3>
+              <p>Estudio · Bogotá · 2025</p>
+            </div>
+            <button class="photo-expand" aria-label="Ver imagen completa" data-index="1">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M7 3H3v4M17 3h-4M3 13v4h4M13 17h4v-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- FOTO 3 -->
+      <article class="photo-item" data-category="urban">
+        <div class="photo-wrap">
+          <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80"
+               alt="Ciudad nocturna" loading="lazy" />
+          <div class="photo-overlay">
+            <div class="photo-meta">
+              <h3>Noche Urbana</h3>
+              <p>Medellín · 2024</p>
+            </div>
+            <button class="photo-expand" aria-label="Ver imagen completa" data-index="2">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M7 3H3v4M17 3h-4M3 13v4h4M13 17h4v-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- FOTO 4 -->
+      <article class="photo-item photo-wide" data-category="landscape">
+        <div class="photo-wrap">
+          <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1200&q=80"
+               alt="Bosque nublado" loading="lazy" />
+          <div class="photo-overlay">
+            <div class="photo-meta">
+              <h3>Niebla del Quindío</h3>
+              <p>Eje Cafetero · 2024</p>
+            </div>
+            <button class="photo-expand" aria-label="Ver imagen completa" data-index="3">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M7 3H3v4M17 3h-4M3 13v4h4M13 17h4v-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- FOTO 5 -->
+      <article class="photo-item" data-category="abstract">
+        <div class="photo-wrap">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+               alt="Textura abstracta" loading="lazy" />
+          <div class="photo-overlay">
+            <div class="photo-meta">
+              <h3>Geometría Oculta</h3>
+              <p>Serie Abstracta · 2025</p>
+            </div>
+            <button class="photo-expand" aria-label="Ver imagen completa" data-index="4">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M7 3H3v4M17 3h-4M3 13v4h4M13 17h4v-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- FOTO 6 -->
+      <article class="photo-item photo-tall" data-category="portrait">
+        <div class="photo-wrap">
+          <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=800&q=80"
+               alt="Retrato masculino" loading="lazy" />
+          <div class="photo-overlay">
+            <div class="photo-meta">
+              <h3>Mirada Quieta</h3>
+              <p>Estudio · Cali · 2025</p>
+            </div>
+            <button class="photo-expand" aria-label="Ver imagen completa" data-index="5">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M7 3H3v4M17 3h-4M3 13v4h4M13 17h4v-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- FOTO 7 -->
+      <article class="photo-item" data-category="urban">
+        <div class="photo-wrap">
+          <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80"
+               alt="Arquitectura urbana" loading="lazy" />
+          <div class="photo-overlay">
+            <div class="photo-meta">
+              <h3>Líneas y Sombra</h3>
+              <p>Bogotá · 2024</p>
+            </div>
+            <button class="photo-expand" aria-label="Ver imagen completa" data-index="6">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M7 3H3v4M17 3h-4M3 13v4h4M13 17h4v-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- FOTO 8 -->
+      <article class="photo-item" data-category="landscape">
+        <div class="photo-wrap">
+          <img src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=800&q=80"
+               alt="Playa al atardecer" loading="lazy" />
+          <div class="photo-overlay">
+            <div class="photo-meta">
+              <h3>Crepúsculo</h3>
+              <p>Costa Pacífica · 2024</p>
+            </div>
+            <button class="photo-expand" aria-label="Ver imagen completa" data-index="7">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M7 3H3v4M17 3h-4M3 13v4h4M13 17h4v-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- FOTO 9 -->
+      <article class="photo-item" data-category="abstract">
+        <div class="photo-wrap">
+          <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&q=80"
+               alt="Luz abstracta" loading="lazy" />
+          <div class="photo-overlay">
+            <div class="photo-meta">
+              <h3>Reflejos</h3>
+              <p>Serie Luz · 2025</p>
+            </div>
+            <button class="photo-expand" aria-label="Ver imagen completa" data-index="8">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M7 3H3v4M17 3h-4M3 13v4h4M13 17h4v-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ── AÑADE MÁS FOTOS AQUÍ ──
+           Copia el bloque <article> de arriba y pégalo justo antes de esta línea.
+      -->
+
+    </div><!-- /gallery-grid -->
+  </section>
+
+  <!-- ───── SOBRE MÍ ───── -->
+  <section class="about-section" id="sobre">
+    <div class="about-inner">
+      <div class="about-text">
+        <p class="about-eyebrow">Sobre mí</p>
+        <h2 class="about-title">La cámara<br /><em>como diario.</em></h2>
+        <p>
+          Fotografío desde hace diez años buscando ese instante donde la luz y el sujeto
+          se olvidan de que alguien mira. Mi trabajo transita entre el paisaje natural,
+          el retrato documental y la abstracción urbana.
+        </p>
+        <p>
+          Disponible para proyectos editoriales, corporativos y colaboraciones artísticas.
+        </p>
+        <a href="#contacto" class="btn-outline">Trabajemos juntos</a>
+      </div>
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=600&q=80"
+             alt="Fotógrafo trabajando" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── CONTACTO ───── -->
+  <section class="contact-section" id="contacto">
+    <div class="contact-inner">
+      <h2 class="contact-title">Hablemos</h2>
+      <p class="contact-sub">¿Un proyecto en mente? Escríbeme.</p>
+      <a href="mailto:hola@areyes.foto" class="contact-email">hola@areyes.foto</a>
+      <div class="social-links">
+        <a href="#" aria-label="Instagram">Ig</a>
+        <a href="#" aria-label="Behance">Be</a>
+        <a href="#" aria-label="LinkedIn">Li</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── FOOTER ───── -->
+  <footer class="site-footer">
+    <p>© 2025 A. Reyes Fotografía — Todos los derechos reservados</p>
+  </footer>
+
+  <!-- ───── LIGHTBOX ───── -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+    <button class="lb-close" id="lbClose" aria-label="Cerrar">&#10005;</button>
+    <button class="lb-prev" id="lbPrev" aria-label="Anterior">&#8592;</button>
+    <button class="lb-next" id="lbNext" aria-label="Siguiente">&#8594;</button>
+    <div class="lb-content">
+      <img id="lbImg" src="" alt="" />
+      <div class="lb-caption">
+        <h3 id="lbTitle"></h3>
+        <p id="lbDesc"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
